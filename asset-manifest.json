@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/toyeee/reactapp/static/css/main.1b3d3da3.css",
+    "main.js": "/toyeee/reactapp/static/js/main.8a3fb0af.js",
+    "index.html": "/toyeee/reactapp/index.html",
+    "main.1b3d3da3.css.map": "/toyeee/reactapp/static/css/main.1b3d3da3.css.map",
+    "main.8a3fb0af.js.map": "/toyeee/reactapp/static/js/main.8a3fb0af.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1b3d3da3.css",
+    "static/js/main.8a3fb0af.js"
+  ]
+}
