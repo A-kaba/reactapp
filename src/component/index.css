@@ -7,9 +7,11 @@ span{
   font-size: 1.2em;
   font-style: italic;
   font-weight: bolder;
+  
 }
 #main{
   background: mediumaquamarine;
+  /* background: mediumaquamarine; */
 }
 
 #search{
@@ -17,7 +19,7 @@ span{
   text-align: center;
 }
 #bgColor{
-  margin-left: 20px ;
+  margin-left: 20px;
 }
 button{
   border-radius: 5px;
@@ -61,6 +63,26 @@ button{
 .card1 :hover{
   background-color: lightsteelblue;
 }
-footer{
-  height: 30%;
+
+#circle{
+  background: cyan;
+  padding: 10px;
+  border-radius: 30px;
 }
+.item i{
+  color: chocolate;
+}
+footer{
+  background: black;
+  color: lightgray;
+}
+footer ul{
+ text-align: center;
+ padding: 20px; 
+}
+
+ul li{
+  display: inline;
+  margin: 20px;
+}
+

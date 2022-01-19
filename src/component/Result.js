@@ -3,17 +3,17 @@ import index from "./index.css";
 
 const Result= (props) => {
    const {user} = props;
-   console.log(user.name)
     const {repos} = props;
+    console.log(repos)
 
-   
-    const list = repos.slice(0,1).map((item, index) =>{
-
+    const list = repos.slice(0,1).map((item,index) =>{
+      console.log(index)
         return (
-        <div id='result'>
+        <div id='result' key={user.id}>
+            
             <div className='card1'>
                 <div className='item'>
-                    <p><img key={index} id='imggithub' src={item.owner.avatar_url}/></p>  
+                    <p><img key={user.id} id='imggithub' src={item.owner.avatar_url}/></p>  
                     <p><span>Name</span> : {user.name}</p>
             
                     <p><span>Occupation</span>: {user.bio}</p>
@@ -25,13 +25,13 @@ const Result= (props) => {
 
             <div className='card1'>
                 <div  className='item'>
-                    <i class="far fa-user"><p><span>Followers</span> : {user.followers}</p></i>
+                    <p><i className="far fa-user"></i> <span>Followers</span>: <span id='circle'>{user.followers}</span></p>
                 </div>
                 <div  className='item'>
-                    <p><span>Following</span>: {user.following}</p>
+                    <p><i className="far fa-user"></i> <span>Following</span>: <span id='circle'>{user.following}</span></p>
                 </div>
                 <div  className='item'>
-                    <p><span>Number of Repos</span>: {repos.length}</p>
+                    <p><span>Number of Repos</span>: <span id='circle'> {repos.length}</span></p>
                 </div>
             </div>
 
@@ -57,19 +57,9 @@ const Result= (props) => {
 
         )
     })
-          
-    
         
     return list
-        // <div id='result'>
-           
-        //     <img id='imggithub' src={repos.owner.avatar_url}/>
-        //     <p>User Name : {repos.owner.login}</p>
-        //     <p>URL : <a href={repos.owner.html_url}>Github Repository Lik</a></p>
-
-        // </div>
-    
-
+       
     
 }
 export default Result;

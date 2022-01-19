@@ -3,6 +3,7 @@ import Result from './Result';
 import Button from './Button';
 import index from "./index.css";
 
+
 const SearchBar = () => {
   const [searchInput, setSearchInput] = useState('');
   const [repos, setDataInput] = useState();
@@ -13,17 +14,14 @@ const SearchBar = () => {
 
   const handleChange = (e) =>{
     setSearchInput(e.target.value)
-    // console.log(setSearchInput(e.target.value))
   }
 
  const handleClick = () =>{
-  // https://api.github.com/repos/{owner}/{repo}
     fetch(`https://api.github.com/users/${searchInput}/repos`)
     .then(res =>{
       return res.json()
     })
     .then(data =>{
-      console.log(data)
       setDataInput(data)
     })
 
@@ -76,9 +74,10 @@ const handleClicks = () =>{
         </div> 
       
         {repos && <Result repos={repos} user={user}/>}
+      
         
       </div>
-      
+        
     )
     
 }
